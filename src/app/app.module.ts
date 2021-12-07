@@ -8,7 +8,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SearchBarComponent } from './component/search-bar/search-bar.component';
 import { DetailsComponent } from './pages/details/details.component';
-import { NavbarComponent } from './component/navbar/navbar.component';
 
 
 @NgModule({
@@ -16,8 +15,7 @@ import { NavbarComponent } from './component/navbar/navbar.component';
     AppComponent,
     HomeComponent,
     SearchBarComponent,
-    DetailsComponent,
-    NavbarComponent
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

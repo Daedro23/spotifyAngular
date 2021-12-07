@@ -25,3 +25,12 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Comentarios
+
+- Se utiliza los services ubicados en services/data.service.ts para las solicitudes de datos
+- En el archiv environments/environments.ts se encuentra la configuración para añadir el token
+- Se requiere solicitar el token via metodos como Postman
+
+- El proyecto basicamente hace una petición a la api de spotify solicitando los nuevos albumnes del momento, luego a base de eso se puede dar click tanto en el artista como en el album para obtener más detalles del mismo, esta acción se realiza registrando la url seleccionada y haciendo un get dicha url para obtener el ID de lo que se buscara
+- El searchbox es unicamente de canciones, pero funciona basicamente como lo de home

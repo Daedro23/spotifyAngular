@@ -24,7 +24,4 @@ export class SearchBarComponent implements OnInit {
           )
       }
     
-    // details(items) {
-    //     this.router.navigateByUrl(`/details/${items.type}/${items.id}`);
-    // }
 }
