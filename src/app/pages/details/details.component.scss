@@ -1,0 +1,79 @@
+.details {
+    background: linear-gradient(transparent 0, rgba(255, 255, 255, 0.5) 100%);
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    .details__artists {
+        display: flex;
+        justify-content: flex-start;
+        margin: 5% 3%;
+        padding: 3%;
+        background: gray;
+        picture {
+            img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+        .details__description {
+            position: relative; 
+            width: 100%;
+            margin-left: 2%;
+
+            .details__text {
+                position: absolute; 
+                bottom: 0;
+                left: 0;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 18px;
+                .details__extra {
+                    display: flex;
+                    .details__separator {
+                        &::before {
+                            content: "•";
+                            margin: 0 4px;
+                        }
+                        &:first-child {
+                            &::before { 
+                                content: "";
+                            }
+                        }
+                    }
+                }
+            }
+            .details__album {
+                font-size: 72px;
+                line-height: 70px;
+            }
+        }
+    }
+    // Tablets
+    @media (max-width: 1255px) {
+        .details__artists
+            .details__description
+                .details__album {
+                    line-height: 50px;
+                    font-size: 48px;
+                }
+    }
+    // Mobile
+    @media (max-width: 719px) {
+        .details__artists {
+            flex-direction: column;
+            text-align: center;
+            padding: 3% 0;
+            .details__description
+                .details__text {
+                    position: relative;
+                    text-align: center;
+                    .details__extra {
+                        justify-content: center;
+                    }
+                }
+        }
+    }
+}

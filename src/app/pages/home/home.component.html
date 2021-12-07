@@ -1,0 +1,20 @@
+<div>
+    <app-search-bar>
+    </app-search-bar>
+</div>
+<ul class="albums__container">
+    <li class="albums__list" *ngFor="let album of albums">
+        <div *ngFor="let art of album.images; first as isFirst">
+            <picture *ngIf="isFirst" class="albums__img" [routerLink]="['/details', 'albums', album.id]">
+                <source srcset="{{art.url}}">
+                <img src="{{art.url}}"/>
+            </picture>
+        </div>
+        <div class="albums__text">
+            <div class="albums__album">{{ album.name }}</div>
+            <div *ngFor="let art of album.artists">
+                <span [routerLink]="['/details', 'artists', art.id]">{{art.name}}</span>
+            </div>
+        </div>
+    </li>
+</ul>

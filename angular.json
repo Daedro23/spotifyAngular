@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "DannyIn"
+    }
+  },
+  "defaultProject": "DannyIn",
+  "cli": {
+    "analytics": "b493ab46-73a6-46bf-bc33-1badc168cd8a"
+  }
 }

@@ -1,0 +1,73 @@
+<!-- Track -->
+<div class="details" >
+    <div *ngIf="resp" class="details__artists">
+        <div *ngFor="let imgs of resp.album.images; first as isFirst;">
+            <picture *ngIf="isFirst">
+                <source srcset="{{imgs.url}}">
+                <img src="{{imgs.url}}">
+            </picture>
+        </div>
+        <div class="details__description">
+            <div class="details__text">
+
+                <div class="details__name">
+                    {{resp.name}}
+                </div>
+                <div class="details__album">
+                    {{resp.album.name}}
+                </div>
+                <div class="details__extra">
+                    <div class="details__artist" *ngFor="let artists of resp.artists">
+                        {{artists.name}}
+                    </div>
+                    <div class="details__separator">
+                        {{resp.album.release_date}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Album / Artits-->
+<div class="details" >
+    <div *ngIf="album" class="details__artists">
+        <div *ngFor="let imgs of album.images; first as isFirst;">
+            <picture *ngIf="isFirst">
+                <source srcset="{{ imgs.url }}">
+                <img src="{{ imgs.url }}">
+            </picture>
+        </div>
+        <div class="details__description">
+            <div class="details__text">
+
+                <div class="details__name">
+                    {{ album.name }}
+                </div>
+                <div class="details__album">
+                    {{ album.name }}
+                </div>
+                <div class="details__extra">
+                    <div class="details__artist" *ngFor="let artists of album.artists">
+                        <div class="details__separator">
+                            {{ artists.name }}
+                        </div>
+                    </div>
+                    <div class="details__separator">
+                        {{ album.release_date }}
+                    </div>
+                    <div *ngIf="album.genres">
+                        <div>
+                            Generos: {{ album.genres }}
+                        </div>
+                        <div>
+                            {{ album.followers.total }} Oyentes mensuales
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

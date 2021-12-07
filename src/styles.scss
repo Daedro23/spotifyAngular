@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    // Colors
+    --main-red: red;
+    --main-green: #1ed760;
+    --main-black: #121212;
+    --main-white: #fff;
+    --main-blackLight: #181818;
+
+    // Font
+    --main-font: Arial, Helvetica, sans-serif;
+
+    li {
+        list-style: none;
+    }
+    body {
+        background-color: var(--main-black);
+        color: white;
+    }
+    ul {
+        padding: 0;
+    }
+}
